@@ -1,3 +1,30 @@
 {
-  "extends": "next/core-web-vitals"
+  // "root": true,
+  // "parser": "@typescript-eslint/parser",
+  // "plugins": [
+  //   "@typescript-eslint"
+  // ],
+  "extends": [
+    // "eslint:recommended",
+    // "plugin:@typescript-eslint/eslint-recommended",
+    // "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals"
+  ],
+  "rules": {
+    "eqeqeq": "warn",
+    "curly": "error",
+    "quotes": ["error", "single"],
+    "prefer-const": "error",
+    "spaced-comment": "warn",
+    "arrow-spacing": "warn",
+    "jsx-quotes": ["error", "prefer-single"],
+    "indent": 2,
+    "no-multiple-empty-lines": "error",
+    "no-multi-spaces": "warn",
+    "no-mixed-spaces-and-tabs": "warn",
+    "no-trailing-spaces": "error",
+    "eol-last": "error",
+    "semi": "off",
+    "no-empty": "error"
+  }
 }

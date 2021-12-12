@@ -1,11 +1,12 @@
-import { createGlobalStyle } from "styled-components"
-const GlobalStyle = createGlobalStyle`
+import { createGlobalStyle } from 'styled-components'
+const GlobalStyle = createGlobalStyle<any>`
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: #F8F8FB;
 }
 
 a {
@@ -16,7 +17,7 @@ a {
 * {
   box-sizing: border-box;
   /* Esta propiedad define el delay que tendra el cambio del tema */
-  transition: .5s all ease-in
+  transition: .3s all ease-in
 }
 `
 export default GlobalStyle

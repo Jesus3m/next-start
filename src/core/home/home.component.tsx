@@ -5,8 +5,7 @@ import { Title } from './home.styled'
 export const HomeC: FC<HomeProps> = ({ toggleTheme }) => {
     return (
         <div>
-            <Title>Home</Title>
-            <button onClick={() => toggleTheme()} >Cambiar tema</button>
+            <Title>Inicio - Pagina de inicio</Title>
         </div>
     )
 }
