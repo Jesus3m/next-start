@@ -1,13 +1,10 @@
-import React, { FC, useContext } from 'react'
-import { GlobalContext } from '../../shared/context/global.context'
+import { FC, useContext } from 'react'
 import { ThemeContext } from '../../shared/context/theme.context'
 import { ExampleC } from './example.component'
 
-
-export const Example: FC = (props) => {
-    const { toggleTheme } = useContext(ThemeContext)
-    const { example } = useContext(GlobalContext)
-    return (
+export const Example: FC = () => {
+  const { toggleTheme } = useContext(ThemeContext)
+  return (
         <ExampleC toggleTheme={toggleTheme} />
-    )
+  )
 }

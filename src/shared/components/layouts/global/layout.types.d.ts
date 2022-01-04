@@ -1,7 +1,5 @@
 export interface AsideProps {
-    width: number,
-    handleDragAside: (width: number)=> void,
-    positionDragger: number
+    width: number
 }
 
 export interface NavProps {

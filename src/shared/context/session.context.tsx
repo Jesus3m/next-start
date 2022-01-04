@@ -1,19 +1,19 @@
-import React, { Context, FC, useState } from 'react'
+import { Context, FC, useState, createContext } from 'react'
 import { SessionContextTypes } from './contexts.types'
 
 // Proveedor de los datos de sesion
-export const SessionContext: Context<SessionContextTypes> = React.createContext({})
+export const SessionContext: Context<SessionContextTypes> = createContext({})
 export const Session: FC = ({ children }) => {
-    // Definicion del estado de la sesion
-    const [session, setSession] = useState(false)
+  // Definicion del estado de la sesion
+  const [session, setSession] = useState(false)
 
-    return (
+  return (
         <>
-            {/* Proveedor del contexto de react para manejo de los datos de sesion*/}
+            {/* Proveedor del contexto de react para manejo de los datos de sesion */}
             <SessionContext.Provider value={{ session, setSession }}>
-                {/* Renderizado de todas los hijos*/}
+                {/* Renderizado de todos los hijos */}
                 {children}
             </SessionContext.Provider>
         </>
-    )
+  )
 }

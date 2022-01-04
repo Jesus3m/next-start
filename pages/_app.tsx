@@ -1,13 +1,16 @@
 import type { AppProps } from 'next/app'
 import GlobalStyle from '../styles/globals'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import { Global as GlobalContextProvider } from '../src/shared/context/global.context'
 import { Theme as ThemeContextProvider } from '../src/shared/context/theme.context'
 import { Session as SessionContextProvider } from '../src/shared/context/session.context'
 import { Layout } from '../src/shared/components/layouts/global/layout.component'
 
 // Componente definido por next para renderizar las pages
-function MyApp({ Component, pageProps, router }: AppProps) {
-    return (
+function MyApp ({ Component, pageProps, router }: AppProps) {
+  library.add(fas) // añado la libreria de iconos
+  return (
         <>
             {/* Estilos globales (StyledComponents) */}
             <GlobalStyle />
@@ -26,7 +29,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             </GlobalContextProvider>
 
         </>
-    )
+  )
 }
 
 export default MyApp

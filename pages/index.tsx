@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import Link from 'next/link'
 import Head from 'next/head'
 
-const Index: NextPage = (props) => {
-    return (
+const Index: NextPage = () => {
+  return (
 
         <>
             <Head>
@@ -16,7 +16,7 @@ const Index: NextPage = (props) => {
             <br />
             <Link href='/example'>Pagina de ejemplo</Link>
         </>
-    )
+  )
 }
 
 export default Index

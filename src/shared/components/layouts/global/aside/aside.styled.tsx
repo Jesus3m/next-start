@@ -1,27 +1,72 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 export const SideBar = styled.aside<any>`
     top: 0;
     left: 0;
+    position: fixed;
+    z-index: 500;
+    width: ${({ width }) => width ? `${width}px` : '60px'};
+    height: 100vh;
+    padding: 60px 0px 10px 0px;
+    background: ${({ theme }) => theme.backgrounds.dark};
+    transition: ${({ theme }) => theme.transitions.fast && css(theme.transitions.fast)};
     display: flex;
     flex-direction: column;
-    position: fixed;
-    height: 100vh;
-    padding: 10px;
-    width: ${({ width }) => width ? `${width}px` : '60px'};
-    background: ${({theme}) => theme.backgrounds.dark};
-    transition: ${({theme}) => theme.transitions.fast && css(theme.transitions.fast)};
-    z-index: 500
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
 
 `
-export const DragResize = styled.span<any>`
+export const NavLink = styled.a<any>`
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 20px;
+    cursor: pointer;
+`
+export const TextNav = styled.span<any>`
     display: block;
+    height: 25px;
+    white-space: nowrap;
+    width: ${({ width }) => width > 60 ? '85%' : '0px'};
+    overflow: hidden;
+    padding-left: ${({ width }) => width > 60 ? '30px' : '0px'};
+    /* opacity: 0; */
+    visibility:${({ width }) => width > 100 ? 'visible' : 'hidden'};
+`
+
+export const SubModuleMenu = styled.section<any>`
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 550;
+    width: 280px;
     height: 100vh;
-    transform: none !important;
-    width: 5px;
+    padding: 60px 0px 10px 0px;
+    /* background:  ${({ theme }) => theme.backgrounds.light}; */
+    background: rgba(0,0,0,.6);
+    backdrop-filter: blur(15px);
+    transition: ${({ theme }) => theme.transitions.fast && css(theme.transitions.fast)};
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    transform: ${({ show }) => show ? 'translateX(0)' : 'translateX(-280px)'} ;
+`
+export const SideSubMenu = styled.section<any>`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 15px;
     position: absolute;
-    right: ${({ right }) => right ? `-${right}px` : '0px'};
-    top: 0px;
-    cursor: e-resize;
-    z-index: 999
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100vh;
+    background:${({ theme }) => theme.backgrounds.dark} ;
+    cursor: pointer;
 `
