@@ -8,7 +8,7 @@ export const TopNav = styled.nav<any>`
     align-items: center;
     height: 50px;
     padding: 10px;
-    width: ${({ width }) => width ? `calc(100vw - ${width || 60}px)` : 'calc(100vw - 60px)'};
+    width: ${({ show }) => show ? 'calc(100vw - 25vw)' : 'calc(100vw - 60px)'};
     background: ${({ theme }) => theme.backgrounds.light};
     transition: ${({ theme }) => theme.transitions.fast && css(theme.transitions.fast)};
     z-index: 20

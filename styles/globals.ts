@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-const GlobalStyle = createGlobalStyle<any>`
+const GlobalStyle = createGlobalStyle`
 html,
 body {
   padding: 0;

@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { HomeC } from './home.component'
-import { useTitle } from '../../shared/hooks/useTitle'
+import { useTitle } from '@hooks/useTitle'
 
 export const Home: FC = () => {
   const [countTitle, setCountTitle] = useState(0)

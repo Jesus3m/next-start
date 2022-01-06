@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import { FC } from 'react'
-import { Home as HomeContainer } from '../../src/core/home/home.container'
+import { Home as HomeContainer } from '@core/home/home.container'
 
 const Home: FC<AppProps> = (props) => {
   return <HomeContainer {...props} />

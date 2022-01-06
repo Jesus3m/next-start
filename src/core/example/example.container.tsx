@@ -1,5 +1,5 @@
 import { FC, useContext } from 'react'
-import { ThemeContext } from '../../shared/context/theme.context'
+import { ThemeContext } from '@context/theme.context'
 import { ExampleC } from './example.component'
 
 export const Example: FC = () => {

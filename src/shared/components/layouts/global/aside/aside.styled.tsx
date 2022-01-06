@@ -5,7 +5,7 @@ export const SideBar = styled.aside<any>`
     left: 0;
     position: fixed;
     z-index: 500;
-    width: ${({ width }) => width ? `${width}px` : '60px'};
+    width: ${({ show }) => show ? '25vw' : '60px'};
     height: 100vh;
     padding: 60px 0px 10px 0px;
     background: ${({ theme }) => theme.backgrounds.dark};
@@ -30,11 +30,11 @@ export const TextNav = styled.span<any>`
     display: block;
     height: 25px;
     white-space: nowrap;
-    width: ${({ width }) => width > 60 ? '85%' : '0px'};
+    width: ${({ show }) => show ? '85%' : '0px'};
     overflow: hidden;
-    padding-left: ${({ width }) => width > 60 ? '30px' : '0px'};
+    padding-left: ${({ show }) => show ? '30px' : '0px'};
     /* opacity: 0; */
-    visibility:${({ width }) => width > 100 ? 'visible' : 'hidden'};
+    visibility:${({ show }) => show ? 'visible' : 'hidden'};
 `
 
 export const SubModuleMenu = styled.section<any>`
@@ -42,7 +42,7 @@ export const SubModuleMenu = styled.section<any>`
     left: 0;
     position: fixed;
     z-index: 550;
-    width: 280px;
+    width: 25vw;
     height: 100vh;
     padding: 60px 0px 10px 0px;
     /* background:  ${({ theme }) => theme.backgrounds.light}; */
@@ -54,7 +54,7 @@ export const SubModuleMenu = styled.section<any>`
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
-    transform: ${({ show }) => show ? 'translateX(0)' : 'translateX(-280px)'} ;
+    transform: ${({ show }) => show ? 'translateX(0)' : 'translateX(-25vw)'} ;
 `
 export const SideSubMenu = styled.section<any>`
     display: flex;

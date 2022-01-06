@@ -1,8 +1,9 @@
 export interface AsideProps {
-    width: number
+    show: boolean
+    toggleAside: () => void
 }
 
 export interface NavProps {
-    width: number,
+    show: boolean
     toggleAside: () => void
 }
